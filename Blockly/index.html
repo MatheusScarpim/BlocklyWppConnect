@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemplo Blockly + WPPConnect</title>
+  <script src="https://unpkg.com/blockly/blockly.min.js"></script>
+  <script src="./wppconnect.min.js"></script>
+  <script src="./wppconnectsystem.js"></script>
+</head>
+<body>
+  <div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
+  <xml id="toolbox" style="display: none">
+    <category name="WPPConnect">
+      <block type="wppconnect_send_message"></block>
+    </category>
+  </xml>
+  <button onclick="runCode()">Executar</button>
+  <script>
+    var workspace = Blockly.inject('blocklyDiv', {
+      toolbox: document.getElementById('toolbox')
+    });
+  </script>
+</body>
+</html>
